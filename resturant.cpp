@@ -18,3 +18,8 @@ public:
         setName(n);
         setPrice(p);
     }
+  // Setters
+    void setID(int i) { ID = i; }
+    void setName(const string& n) { name = n; }
+    void setPrice(int p) { price = p; }
+
