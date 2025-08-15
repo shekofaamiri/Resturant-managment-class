@@ -92,3 +92,21 @@ void saveMenuToFile(const string& filename) {
     }
     file.close();
 }
+int main() {
+    const string filename = "menu.txt";
+
+    readMenuFromFile(filename);
+
+    cout << "Full menu:" << endl;
+    showMenu();
+
+    cout << "\nEnter ID to search: ";
+    int searchID;
+    cin >> searchID;
+
+    showFood(searchID);
+
+    saveMenuToFile(filename);
+
+    return 0;
+}
