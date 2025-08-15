@@ -55,3 +55,11 @@ void readMenuFromFile(const string& filename) {
     }
     file.close();
 }
+// Find food by ID
+int findFoodByID(int id) {
+    for (size_t i = 0; i < menu.size(); ++i) {
+        if (menu[i].getID() == id)
+            return i;
+    }
+    return -1;
+}
