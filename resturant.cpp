@@ -23,3 +23,13 @@ public:
     void setName(const string& n) { name = n; }
     void setPrice(int p) { price = p; }
 
+ // Getters
+    int getID() const { return ID; }
+    string getName() const { return name; }
+    int getPrice() const { return price; }
+
+    // Print food
+    void print() const {
+        cout << ID << ", " << name << ", " << price << " Toman" << endl;
+    }
+};
