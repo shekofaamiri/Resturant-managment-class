@@ -63,3 +63,10 @@ int findFoodByID(int id) {
     }
     return -1;
 }
+// Show full menu
+void showMenu() {
+    cout << "ID\tName\tPrice" << endl;
+    for (const auto& f : menu) {
+        cout << f.getID() << "\t" << f.getName() << "\t" << f.getPrice() << endl;
+    }
+}
