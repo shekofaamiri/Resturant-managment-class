@@ -70,3 +70,13 @@ void showMenu() {
         cout << f.getID() << "\t" << f.getName() << "\t" << f.getPrice() << endl;
     }
 }
+// Show food by ID
+void showFood(int id) {
+    int index = findFoodByID(id);
+    if (index == -1) {
+        cout << "Food not found." << endl;
+        return;
+    }
+    cout << "Food found: ";
+    menu[index].print();
+}
