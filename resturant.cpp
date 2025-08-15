@@ -80,3 +80,15 @@ void showFood(int id) {
     cout << "Food found: ";
     menu[index].print();
 }
+// Save menu to file
+void saveMenuToFile(const string& filename) {
+    ofstream file(filename);
+    if (!file) {
+        cout << "Unable to open file " << filename << " for writing." << endl;
+        return;
+    }
+    for (const auto& f : menu) {
+        file << f.getID() << " " << f.getName() << " " << f.getPrice() << endl;
+    }
+    file.close();
+}
