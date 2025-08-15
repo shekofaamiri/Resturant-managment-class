@@ -32,4 +32,7 @@ public:
     void print() const {
         cout << ID << ", " << name << ", " << price << " Toman" << endl;
     }
+        void print() const {
+        cout << ID << ", " << name << ", " << price << " Toman" << endl;
+    }
 };
