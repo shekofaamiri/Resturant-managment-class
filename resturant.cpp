@@ -36,3 +36,22 @@ public:
         cout << ID << ", " << name << ", " << price << " Toman" << endl;
     }
 };
+// Global menu vector
+vector<Food> menu;
+
+// Read menu from file
+void readMenuFromFile(const string& filename) {
+    ifstream file(filename);
+    if (!file) {
+        cout << "Unable to open file: " << filename << endl;
+        return;
+    }
+    menu.clear();
+
+    int id, price;
+    string name;
+    while (file >> id >> name >> price) {
+        menu.emplace_back(id, name, price);
+    }
+    file.close();
+}
